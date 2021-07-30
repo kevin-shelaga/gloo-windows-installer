@@ -1,7 +1,6 @@
 Param(
     [Parameter(Mandatory = $false,
         ParameterSetName = "GLOO_VERSION")]
-    [String]
     $GLOO_VERSION
 )
 
