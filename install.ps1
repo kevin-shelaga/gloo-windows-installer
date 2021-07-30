@@ -90,7 +90,8 @@ if ($glooctlDownloaded -eq $true) {
     Write-Output "  glooctl install ingress     # install very basic Kubernetes Ingress support with Gloo into namespace gloo-system"
     Write-Output "  glooctl install knative     # install Knative serving with Gloo configured as the default cluster ingress"
     Write-Output "Please see visit the Gloo Installation guides for more:  https://docs.solo.io/gloo-edge/latest/installation/"
-    exit 0
+    
+    Read-Host -Prompt "Press Enter to exit"
 }
 else {
     Set-Location (Get-Item $currentLocation).DirectoryName
