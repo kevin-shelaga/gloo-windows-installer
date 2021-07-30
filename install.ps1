@@ -5,7 +5,9 @@ Param(
     $GLOO_VERSION
 )
 
-$currentLocation = $PSScriptRoot
+$currentLocation = = if ($PSScriptRoot) { $PSScriptRoot } `
+    elseif ($psise) { split-path $psise.CurrentFile.FullPath } `
+    elseif ($psEditor) { split-path $psEditor.GetEditorContext().CurrentFile.Path }
 
 $openssl_version = & { openssl version } 2>&1
 
