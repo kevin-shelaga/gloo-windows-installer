@@ -5,7 +5,7 @@ Param(
     $GLOO_VERSION
 )
 
-$currentLocation = = if ($PSScriptRoot) { $PSScriptRoot } `
+$currentLocation = if ($PSScriptRoot) { $PSScriptRoot } `
     elseif ($psise) { split-path $psise.CurrentFile.FullPath } `
     elseif ($psEditor) { split-path $psEditor.GetEditorContext().CurrentFile.Path }
 
